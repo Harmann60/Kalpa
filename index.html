@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyKalpa | The Switzerland of India</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-gray-900">
+
+<nav class="absolute top-0 w-full z-50 flex justify-between items-center p-6 text-white bg-black/20">
+    <div class="text-2xl font-extrabold tracking-tight">MyKalpa.</div>
+    <ul class="hidden md:flex space-x-8 font-semibold text-sm">
+        <li class="hover:underline cursor-pointer">Destinations</li>
+        <li class="hover:underline cursor-pointer">Experiences</li>
+        <li class="hover:underline cursor-pointer">Accommodation</li>
+        <li class="hover:underline cursor-pointer">Planning</li>
+    </ul>
+    <div class="flex space-x-4">
+        <span class="text-sm font-semibold">EN | HI</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    </div>
+</nav>
+
+<header class="relative w-full h-screen flex items-end pb-24 justify-center overflow-hidden">
+
+    <video autoplay loop muted playsinline poster="asset/kalpabg.jpg" class="absolute inset-0 w-full h-full object-cover z-0">
+        <source src="asset/bg.mp4" type="video/mp4">
+    </video>
+    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 z-10"></div>
+
+    <div class="relative z-20 text-center text-white px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 drop-shadow-lg">KALPA</h1>
+        <p class="text-lg md:text-2xl font-light mb-8 drop-shadow-md">Discover the magic of the Kinner Kailash.</p>
+        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            Discover Kalpa
+        </button>
+    </div>
+</header>
+<section class="w-full bg-white py-24 px-6 md:px-12 lg:px-24">
+
+    <div class="max-w-7xl mx-auto mb-16 text-center md:text-left">
+        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">Getting to Kalpa.</h2>
+        <p class="text-lg text-gray-500 font-light max-w-2xl">The journey to 2,960m is populated with scenic landscapes, making the trip an affair you will always remember.</p>
+    </div>
+
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+
+        <div class="group border-t border-gray-200 pt-8">
+            <svg class="w-8 h-8 text-red-600 mb-6 group-hover:-translate-y-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">By Air</h3>
+            <p class="text-gray-600 leading-relaxed font-light">
+                The nearest airport is at Shimla, 267 km from Kalpa. It connects to major cities like Delhi and Mumbai. Cabs and taxis are easily available outside the airport directly to Kalpa.
+            </p>
+        </div>
+
+        <div class="group border-t border-gray-200 pt-8">
+            <svg class="w-8 h-8 text-red-600 mb-6 group-hover:-translate-y-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 7v14m0-14c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm0 14h-3m3 0h3m-6-4h6m-6-4h6"></path></svg>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">By Train</h3>
+            <p class="text-gray-600 leading-relaxed font-light">
+                The nearest railway station is Shimla (260 km), a major hub connecting to cities including Delhi. From there, you can easily hire a taxi or take a scenic bus ride to Kalpa.
+            </p>
+        </div>
+
+        <div class="group border-t border-gray-200 pt-8">
+            <svg class="w-8 h-8 text-red-600 mb-6 group-hover:-translate-y-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">By Road</h3>
+            <p class="text-gray-600 leading-relaxed font-light mb-4">
+                The most convenient option. HRTC offers regular bus services from Shimla, Delhi, and Punjab. Private buses from Delhi are also available.
+            </p>
+            <p class="text-sm font-semibold text-gray-900 mb-2">Popular Routes:</p>
+            <ul class="text-sm text-gray-600 font-light space-y-2 border-l-2 border-red-600 pl-4">
+                <li>1. Delhi &rarr; Shimla &rarr; Rampur &rarr; Kalpa</li>
+                <li>2. Delhi &rarr; Manali &rarr; Kaza &rarr; Kalpa</li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+
+</body>
+</html>
