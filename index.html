@@ -41,46 +41,177 @@
         </button>
     </div>
 </header>
-<section class="w-full bg-white py-24 px-6 md:px-12 lg:px-24">
+<section class="w-full bg-[#0a0a0a] py-24 px-6 md:px-12 lg:px-24 font-sans text-white">
+    <div class="max-w-6xl mx-auto">
 
-    <div class="max-w-7xl mx-auto mb-16 text-center md:text-left">
-        <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">Getting to Kalpa.</h2>
-        <p class="text-lg text-gray-500 font-light max-w-2xl">The journey to 2,960m is populated with scenic landscapes, making the trip an affair you will always remember.</p>
-    </div>
+        <div class="flex flex-wrap items-center justify-center gap-6 mb-8 border-b border-gray-800 pb-4">
+            <button onclick="switchTab('flight')" id="tab-flight" class="tab-btn flex items-center space-x-2 text-red-500 border-b-2 border-red-500 pb-2 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span class="font-semibold tracking-wide">Flights</span>
+            </button>
 
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+            <button onclick="switchTab('train')" id="tab-train" class="tab-btn flex items-center space-x-2 text-gray-400 hover:text-white pb-2 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v14m0-14c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm0 14h-3m3 0h3m-6-4h6m-6-4h6"></path></svg>
+                <span class="font-semibold tracking-wide">Railway</span>
+            </button>
 
-        <div class="group border-t border-gray-200 pt-8">
-            <svg class="w-8 h-8 text-red-600 mb-6 group-hover:-translate-y-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">By Air</h3>
-            <p class="text-gray-600 leading-relaxed font-light">
-                The nearest airport is at Shimla, 267 km from Kalpa. It connects to major cities like Delhi and Mumbai. Cabs and taxis are easily available outside the airport directly to Kalpa.
-            </p>
+            <button onclick="switchTab('bus')" id="tab-bus" class="tab-btn flex items-center space-x-2 text-gray-400 hover:text-white pb-2 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                <span class="font-semibold tracking-wide">HRTC Buses</span>
+            </button>
         </div>
 
-        <div class="group border-t border-gray-200 pt-8">
-            <svg class="w-8 h-8 text-red-600 mb-6 group-hover:-translate-y-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 7v14m0-14c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm0 14h-3m3 0h3m-6-4h6m-6-4h6"></path></svg>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">By Train</h3>
-            <p class="text-gray-600 leading-relaxed font-light">
-                The nearest railway station is Shimla (260 km), a major hub connecting to cities including Delhi. From there, you can easily hire a taxi or take a scenic bus ride to Kalpa.
-            </p>
-        </div>
+        <div class="flex flex-col lg:flex-row gap-6">
 
-        <div class="group border-t border-gray-200 pt-8">
-            <svg class="w-8 h-8 text-red-600 mb-6 group-hover:-translate-y-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-            <h3 class="text-2xl font-bold text-gray-900 mb-4">By Road</h3>
-            <p class="text-gray-600 leading-relaxed font-light mb-4">
-                The most convenient option. HRTC offers regular bus services from Shimla, Delhi, and Punjab. Private buses from Delhi are also available.
-            </p>
-            <p class="text-sm font-semibold text-gray-900 mb-2">Popular Routes:</p>
-            <ul class="text-sm text-gray-600 font-light space-y-2 border-l-2 border-red-600 pl-4">
-                <li>1. Delhi &rarr; Shimla &rarr; Rampur &rarr; Kalpa</li>
-                <li>2. Delhi &rarr; Manali &rarr; Kaza &rarr; Kalpa</li>
-            </ul>
-        </div>
+            <div class="bg-[#121212] border border-gray-800 rounded-2xl p-6 lg:w-1/3 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <div class="flex flex-col space-y-4 border border-gray-700 rounded-xl p-1">
+                        <div class="px-4 py-2 border-b border-gray-700">
+                            <label class="text-xs text-gray-400 uppercase tracking-wider">From</label>
+                            <input type="text" placeholder="Enter departure city" class="w-full bg-transparent text-white focus:outline-none text-lg mt-1 placeholder-gray-600">
+                        </div>
+                        <div class="px-4 py-2">
+                            <label class="text-xs text-gray-400 uppercase tracking-wider">To</label>
+                            <input type="text" value="Shimla / Kalpa" readonly class="w-full bg-transparent text-white focus:outline-none text-lg mt-1 cursor-not-allowed">
+                        </div>
+                    </div>
 
+                    <div class="border border-gray-700 rounded-xl px-4 py-3">
+                        <label class="text-xs text-gray-400 uppercase tracking-wider">Date of Travel</label>
+                        <input type="date" class="w-full bg-transparent text-white focus:outline-none text-lg mt-1 color-scheme-dark">
+                    </div>
+                </div>
+
+                <button onclick="handleSearch()" id="search-btn" class="mt-8 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition duration-300 shadow-[0_0_15px_rgba(220,38,38,0.3)]">
+                    Search Flights
+                </button>
+            </div>
+
+            <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-[#121212] border border-gray-800 rounded-2xl overflow-hidden hover:border-gray-600 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1626082895617-2c6ab557088b?q=80&w=800&auto=format&fit=crop" alt="Kalpa Roads" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Discover</p>
+                        <h3 class="text-2xl font-bold mb-3">The Hindustan-Tibet Road Trip</h3>
+                        <p class="text-gray-400 text-sm mb-4">Experience one of the world's most thrilling drives. Journey through the rock-carved tunnels of Kinnaur to reach the peaceful heights of Kalpa.</p>
+                        <a href="#" class="text-red-500 font-semibold hover:text-red-400 transition">More information</a>
+                    </div>
+                </div>
+
+                <div class="bg-[#121212] border border-gray-800 rounded-2xl overflow-hidden hover:border-gray-600 transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1542223616-740d5dff7f56?q=80&w=800&auto=format&fit=crop" alt="HRTC Bus" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Transport</p>
+                        <h3 class="text-2xl font-bold mb-3">Travel like a Local with HRTC</h3>
+                        <p class="text-gray-400 text-sm mb-4">Board the reliable Himachal Road Transport buses from Shimla or Delhi. Enjoy the panoramic views of the Sutlej river valley safely.</p>
+                        <a href="#" class="text-red-500 font-semibold hover:text-red-400 transition">View Timetables</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
+<section class="w-full bg-white py-24 px-6 md:px-12 lg:px-24">
+    <div class="max-w-7xl mx-auto">
+
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+            <div>
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">Top Destinations.</h2>
+                <p class="text-lg text-gray-500 font-light max-w-2xl">Explore the raw beauty, thrilling drops, and rich culture of the Kinnaur valley.</p>
+            </div>
+            <a href="#" class="text-red-600 font-semibold hover:text-red-700 transition mt-6 md:mt-0 flex items-center gap-2 group">
+                View all places
+                <svg class="w-4 h-4 group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+            </a>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px] md:auto-rows-[400px]">
+
+            <div class="group relative md:col-span-2 md:row-span-1 overflow-hidden rounded-2xl cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1626082895617-2c6ab557088b?q=80&w=1200&auto=format&fit=crop" alt="Kinner Kailash Range" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+
+                <div class="absolute bottom-0 left-0 p-8 w-full">
+                    <p class="text-white/80 text-sm font-semibold uppercase tracking-widest mb-2">Nature</p>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-2">Kinner Kailash Range</h3>
+                    <div class="overflow-hidden">
+                        <p class="text-white/90 font-light max-w-lg opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-8 group-hover:translate-y-0">
+                            Witness the sacred peak changing colors as the sun rises over the Himalayas. A view you will never forget.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1593351415075-3bac9f45c877?q=80&w=800&auto=format&fit=crop" alt="Suicide Point" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <p class="text-white/80 text-xs font-semibold uppercase tracking-widest mb-1">Adventure</p>
+                    <h3 class="text-2xl font-bold text-white">Suicide Point</h3>
+                </div>
+            </div>
+
+            <div class="group relative overflow-hidden rounded-2xl cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1588693959306-444458d6e3f5?q=80&w=800&auto=format&fit=crop" alt="Roghi Village" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <p class="text-white/80 text-xs font-semibold uppercase tracking-widest mb-1">Culture</p>
+                    <h3 class="text-2xl font-bold text-white">Roghi Village</h3>
+                </div>
+            </div>
+
+            <div class="group relative md:col-span-2 overflow-hidden rounded-2xl cursor-pointer shadow-lg">
+                <img src="https://images.unsplash.com/photo-1605640840424-4f056d691e84?q=80&w=1200&auto=format&fit=crop" alt="Narayan-Nagini Temple" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-0 left-0 p-6">
+                    <p class="text-white/80 text-xs font-semibold uppercase tracking-widest mb-1">Heritage</p>
+                    <h3 class="text-2xl font-bold text-white">Narayan-Nagini Temple</h3>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    let currentMode = 'flight'; // Default mode
+
+    function switchTab(mode) {
+        currentMode = mode;
+
+        // Reset all tabs to default state (gray)
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.classList.remove('text-red-500', 'border-b-2', 'border-red-500');
+            btn.classList.add('text-gray-400');
+        });
+
+        // Highlight the active tab (red)
+        const activeTab = document.getElementById(`tab-${mode}`);
+        activeTab.classList.remove('text-gray-400');
+        activeTab.classList.add('text-red-500', 'border-b-2', 'border-red-500');
+
+        // Update Button Text
+        const searchBtn = document.getElementById('search-btn');
+        if (mode === 'flight') {
+            searchBtn.innerText = 'Search Flights';
+        } else if (mode === 'train') {
+            searchBtn.innerText = 'Search Trains';
+        } else if (mode === 'bus') {
+            searchBtn.innerText = 'Search HRTC Buses';
+        }
+    }
+
+    function handleSearch() {
+        // Redirect based on the selected tab
+        if (currentMode === 'flight') {
+            window.open('https://www.makemytrip.com/flights/', '_blank');
+        } else if (currentMode === 'train') {
+            window.open('https://www.irctc.co.in/nget/', '_blank');
+        } else if (currentMode === 'bus') {
+            window.open('https://www.hrtchp.com/', '_blank');
+        }
+    }
+</script>
 
 </body>
 </html>
