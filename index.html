@@ -3,215 +3,268 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MyKalpa | The Switzerland of India</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { font-family: 'Inter', sans-serif; }
-    </style>
+    <title>Kalpa | The Crown Jewel of Kinnaur</title>
+    <meta name="description" content="Discover Kalpa, the beautiful village in Himachal Pradesh. Experience the Kinnaur Kailash range, ancient temples, and thrilling landscapes.">
+    <!-- Linking our new Vanilla CSS design system -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-white text-gray-900">
+<body>
 
-<nav class="absolute top-0 w-full z-50 flex justify-between items-center p-6 text-white bg-black/20">
-    <div class="text-2xl font-extrabold tracking-tight">MyKalpa.</div>
-    <ul class="hidden md:flex space-x-8 font-semibold text-sm">
-        <li class="hover:underline cursor-pointer">Destinations</li>
-        <li class="hover:underline cursor-pointer">Experiences</li>
-        <li class="hover:underline cursor-pointer">Accommodation</li>
-        <li class="hover:underline cursor-pointer">Planning</li>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="nav-logo text-gradient">Kalpa.</div>
+    <ul class="nav-links">
+        <li><a href="#destinations">Destinations</a></li>
+        <li><a href="#accommodations">Stays</a></li>
+        <li><a href="#planning">Planning</a></li>
     </ul>
-    <div class="flex space-x-4">
-        <span class="text-sm font-semibold">EN | HI</span>
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+    <div class="nav-actions">
+        <span class="lang-switch" style="font-weight: 600; font-size: 0.9rem;">EN | HI</span>
+        <button class="btn-primary">Visit Kalpa</button>
     </div>
 </nav>
 
-<header class="relative w-full h-screen flex items-end pb-24 justify-center overflow-hidden">
-
-    <video autoplay loop muted playsinline poster="asset/kalpabg.jpg" class="absolute inset-0 w-full h-full object-cover z-0">
+<!-- Hero Section -->
+<header class="hero">
+    <video autoplay loop muted playsinline poster="asset/kalpabg.jpg" class="hero-video">
         <source src="asset/bg.mp4" type="video/mp4">
     </video>
-    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10 z-10"></div>
-
-    <div class="relative z-20 text-center text-white px-4">
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4 drop-shadow-lg">KALPA</h1>
-        <p class="text-lg md:text-2xl font-light mb-8 drop-shadow-md">Discover the magic of the Kinner Kailash.</p>
-        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold py-4 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-            Discover Kalpa
-        </button>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1 class="hero-title text-gradient">KALPA</h1>
+        <p class="subtitle">Where the sacred Kinner Kailash touches the sky.</p>
     </div>
 </header>
-<section class="w-full bg-[#0a0a0a] py-24 px-6 md:px-12 lg:px-24 font-sans text-white">
-    <div class="max-w-6xl mx-auto">
 
-        <div class="flex flex-wrap items-center justify-center gap-6 mb-8 border-b border-gray-800 pb-4">
-            <button onclick="switchTab('flight')" id="tab-flight" class="tab-btn flex items-center space-x-2 text-red-500 border-b-2 border-red-500 pb-2 transition">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                <span class="font-semibold tracking-wide">Flights</span>
-            </button>
-
-            <button onclick="switchTab('train')" id="tab-train" class="tab-btn flex items-center space-x-2 text-gray-400 hover:text-white pb-2 transition">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 7v14m0-14c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3zm0 14h-3m3 0h3m-6-4h6m-6-4h6"></path></svg>
-                <span class="font-semibold tracking-wide">Railway</span>
-            </button>
-
-            <button onclick="switchTab('bus')" id="tab-bus" class="tab-btn flex items-center space-x-2 text-gray-400 hover:text-white pb-2 transition">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                <span class="font-semibold tracking-wide">HRTC Buses</span>
-            </button>
-        </div>
-
-        <div class="flex flex-col lg:flex-row gap-6">
-
-            <div class="bg-[#121212] border border-gray-800 rounded-2xl p-6 lg:w-1/3 flex flex-col justify-between">
-                <div class="space-y-4">
-                    <div class="flex flex-col space-y-4 border border-gray-700 rounded-xl p-1">
-                        <div class="px-4 py-2 border-b border-gray-700">
-                            <label class="text-xs text-gray-400 uppercase tracking-wider">From</label>
-                            <input type="text" placeholder="Enter departure city" class="w-full bg-transparent text-white focus:outline-none text-lg mt-1 placeholder-gray-600">
-                        </div>
-                        <div class="px-4 py-2">
-                            <label class="text-xs text-gray-400 uppercase tracking-wider">To</label>
-                            <input type="text" value="Shimla / Kalpa" readonly class="w-full bg-transparent text-white focus:outline-none text-lg mt-1 cursor-not-allowed">
-                        </div>
-                    </div>
-
-                    <div class="border border-gray-700 rounded-xl px-4 py-3">
-                        <label class="text-xs text-gray-400 uppercase tracking-wider">Date of Travel</label>
-                        <input type="date" class="w-full bg-transparent text-white focus:outline-none text-lg mt-1 color-scheme-dark">
-                    </div>
+<!-- Transport / Planning Section -->
+<section id="planning" class="section">
+    <div class="container reveal">
+        <h2 class="text-gradient">Journey to the Clouds.</h2>
+        <p class="subtitle" style="margin-bottom: 2rem;">Plan your ascent to the Kinnaur valley.</p>
+        
+        <div class="transport-grid">
+            <!-- Travel Logistics Info Panel -->
+            <div class="logistics-panel">
+                <div class="logistics-item">
+                    <h3 class="logistics-title">By Flight ✈️</h3>
+                    <p class="logistics-desc">
+                        The nearest airports are <strong>Shimla Airport (Jubbarhatti)</strong> (approx. 245–275 km, 7–9 hrs drive) and <strong>Chandigarh Airport</strong> (approx. 330–350 km, 10–12 hrs drive).
+                    </p>
+                </div>
+                
+                <div class="logistics-item">
+                    <h3 class="logistics-title">By Road 🚙</h3>
+                    <p class="logistics-desc">
+                        <strong>Route 1 (Primary):</strong> Shimla-Kinnaur route via NH5. This is the recommended route offering gradual acclimatization. <br>
+                        <strong>Route 2 (Spiti Circuit):</strong> Manali-Kaza route. Travel from Manali via Kunzum Pass to Kaza and then Kalpa. <em>(Note: Kunzum Pass is closed in winter).</em>
+                    </p>
                 </div>
 
-                <button onclick="handleSearch()" id="search-btn" class="mt-8 w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 rounded-xl transition duration-300 shadow-[0_0_15px_rgba(220,38,38,0.3)]">
-                    Search Flights
-                </button>
-            </div>
-
-            <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-[#121212] border border-gray-800 rounded-2xl overflow-hidden hover:border-gray-600 transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1626082895617-2c6ab557088b?q=80&w=800&auto=format&fit=crop" alt="Kalpa Roads" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Discover</p>
-                        <h3 class="text-2xl font-bold mb-3">The Hindustan-Tibet Road Trip</h3>
-                        <p class="text-gray-400 text-sm mb-4">Experience one of the world's most thrilling drives. Journey through the rock-carved tunnels of Kinnaur to reach the peaceful heights of Kalpa.</p>
-                        <a href="#" class="text-red-500 font-semibold hover:text-red-400 transition">More information</a>
-                    </div>
-                </div>
-
-                <div class="bg-[#121212] border border-gray-800 rounded-2xl overflow-hidden hover:border-gray-600 transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1542223616-740d5dff7f56?q=80&w=800&auto=format&fit=crop" alt="HRTC Bus" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Transport</p>
-                        <h3 class="text-2xl font-bold mb-3">Travel like a Local with HRTC</h3>
-                        <p class="text-gray-400 text-sm mb-4">Board the reliable Himachal Road Transport buses from Shimla or Delhi. Enjoy the panoramic views of the Sutlej river valley safely.</p>
-                        <a href="#" class="text-red-500 font-semibold hover:text-red-400 transition">View Timetables</a>
-                    </div>
+                <div class="logistics-item">
+                    <h3 class="logistics-title">By Train & Bus 🚆🚌</h3>
+                    <p class="logistics-desc">
+                        The nearest railway stations are <strong>Kalka</strong> and <strong>Shimla</strong>. From there, you can take reliable <strong>HRTC buses</strong> or private buses to Reckong Peo. From Reckong Peo, local buses and taxis easily connect to Kalpa (10 km).
+                    </p>
                 </div>
             </div>
 
+            <!-- Glass Search Panel -->
+            <div class="glass-panel">
+                <div class="tabs">
+                    <button class="tab-btn active" data-mode="flight">Flights</button>
+                    <button class="tab-btn" data-mode="train">Railway</button>
+                    <button class="tab-btn" data-mode="bus">HRTC</button>
+                </div>
+                <div class="input-group">
+                    <span class="input-label">From</span>
+                    <input type="text" placeholder="Departure City" class="input-field">
+                </div>
+                <div class="input-group">
+                    <span class="input-label">To</span>
+                    <input type="text" value="Shimla / Kalpa" readonly class="input-field" style="cursor: not-allowed; color: var(--text-muted);">
+                </div>
+                <button id="search-btn" class="btn-primary btn-full">Search Transport</button>
+            </div>
         </div>
     </div>
 </section>
-<section class="w-full bg-white py-24 px-6 md:px-12 lg:px-24">
-    <div class="max-w-7xl mx-auto">
 
-        <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-            <div>
-                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-gray-900 mb-4">Top Destinations.</h2>
-                <p class="text-lg text-gray-500 font-light max-w-2xl">Explore the raw beauty, thrilling drops, and rich culture of the Kinnaur valley.</p>
-            </div>
-            <a href="#" class="text-red-600 font-semibold hover:text-red-700 transition mt-6 md:mt-0 flex items-center gap-2 group">
-                View all places
-                <svg class="w-4 h-4 group-hover:translate-x-1 transition duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </a>
-        </div>
+<!-- Destinations Section -->
+<section id="destinations" class="section">
+    <div class="container reveal">
+        <h2>Sacred Vistas.</h2>
+        <p class="subtitle">Click on the destinations below to learn more about the heritage of Kalpa.</p>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[300px] md:auto-rows-[400px]">
-
-            <div class="group relative md:col-span-2 md:row-span-1 overflow-hidden rounded-2xl cursor-pointer shadow-lg">
-                <img src="https://images.unsplash.com/photo-1626082895617-2c6ab557088b?q=80&w=1200&auto=format&fit=crop" alt="Kinner Kailash Range" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-
-                <div class="absolute bottom-0 left-0 p-8 w-full">
-                    <p class="text-white/80 text-sm font-semibold uppercase tracking-widest mb-2">Nature</p>
-                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-2">Kinner Kailash Range</h3>
-                    <div class="overflow-hidden">
-                        <p class="text-white/90 font-light max-w-lg opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-8 group-hover:translate-y-0">
-                            Witness the sacred peak changing colors as the sun rises over the Himalayas. A view you will never forget.
-                        </p>
+        <div class="gallery-grid">
+            <div class="gallery-item gallery-item-1" data-modal="modal-kailash">
+                <img src="https://images.unsplash.com/photo-1626082895617-2c6ab557088b?q=80&w=1200&auto=format&fit=crop" alt="Kinner Kailash Range" class="gallery-img">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="card-tag">Nature</span>
+                        <h3 class="gallery-title">Kinnaur Kailash</h3>
+                        <p class="gallery-desc">Click to read about the majestic peak.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-2xl cursor-pointer shadow-lg">
-                <img src="https://images.unsplash.com/photo-1593351415075-3bac9f45c877?q=80&w=800&auto=format&fit=crop" alt="Suicide Point" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-6">
-                    <p class="text-white/80 text-xs font-semibold uppercase tracking-widest mb-1">Adventure</p>
-                    <h3 class="text-2xl font-bold text-white">Suicide Point</h3>
+            <div class="gallery-item gallery-item-2" data-modal="modal-suicide">
+                <img src="https://images.unsplash.com/photo-1593351415075-3bac9f45c877?q=80&w=800&auto=format&fit=crop" alt="Suicide Point" class="gallery-img">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="card-tag">Thrill</span>
+                        <h3 class="gallery-title">Suicide Point</h3>
+                        <p class="gallery-desc">Click to view details.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="group relative overflow-hidden rounded-2xl cursor-pointer shadow-lg">
-                <img src="https://images.unsplash.com/photo-1588693959306-444458d6e3f5?q=80&w=800&auto=format&fit=crop" alt="Roghi Village" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-6">
-                    <p class="text-white/80 text-xs font-semibold uppercase tracking-widest mb-1">Culture</p>
-                    <h3 class="text-2xl font-bold text-white">Roghi Village</h3>
+            <div class="gallery-item gallery-item-3" data-modal="modal-roghi">
+                <img src="https://images.unsplash.com/photo-1588693959306-444458d6e3f5?q=80&w=800&auto=format&fit=crop" alt="Roghi Village" class="gallery-img">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="card-tag">Heritage</span>
+                        <h3 class="gallery-title">Roghi Village</h3>
+                        <p class="gallery-desc">Click to discover local life.</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="group relative md:col-span-2 overflow-hidden rounded-2xl cursor-pointer shadow-lg">
-                <img src="https://images.unsplash.com/photo-1605640840424-4f056d691e84?q=80&w=1200&auto=format&fit=crop" alt="Narayan-Nagini Temple" class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-105">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent"></div>
-                <div class="absolute bottom-0 left-0 p-6">
-                    <p class="text-white/80 text-xs font-semibold uppercase tracking-widest mb-1">Heritage</p>
-                    <h3 class="text-2xl font-bold text-white">Narayan-Nagini Temple</h3>
+            <div class="gallery-item gallery-item-4" data-modal="modal-temple">
+                <img src="https://images.unsplash.com/photo-1605640840424-4f056d691e84?q=80&w=1200&auto=format&fit=crop" alt="Narayan-Nagini Temple" class="gallery-img">
+                <div class="gallery-overlay">
+                    <div class="gallery-content">
+                        <span class="card-tag">Spiritual</span>
+                        <h3 class="gallery-title">Narayan-Nagini Temple</h3>
+                        <p class="gallery-desc">Click to uncover ancient mythology.</p>
+                    </div>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
-<script>
-    let currentMode = 'flight'; // Default mode
 
-    function switchTab(mode) {
-        currentMode = mode;
+<!-- Accommodations Section -->
+<section id="accommodations" class="section" style="background-color: var(--surface-color);">
+    <div class="container reveal">
+        <h2 class="text-gradient">Stays & Hospitality.</h2>
+        <p class="subtitle">Experience the warmth of Kinnauri hospitality.</p>
 
-        // Reset all tabs to default state (gray)
-        document.querySelectorAll('.tab-btn').forEach(btn => {
-            btn.classList.remove('text-red-500', 'border-b-2', 'border-red-500');
-            btn.classList.add('text-gray-400');
-        });
+        <div class="stays-grid">
+            <!-- Hotel Card -->
+            <div class="stay-card">
+                <div class="stay-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop" alt="Hotel Rakpa Regency" class="stay-img">
+                    <span class="stay-badge hotel-badge">Hotel</span>
+                </div>
+                <div class="stay-content">
+                    <h3 class="stay-title">Hotel Rakpa Regency</h3>
+                    <p class="stay-desc">A premium hotel known for breathtaking, unobstructed views of the Kinnaur Kailash range right from your balcony.</p>
+                </div>
+            </div>
+            
+            <!-- Hotel Card -->
+            <div class="stay-card">
+                <div class="stay-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?q=80&w=800&auto=format&fit=crop" alt="Hotel Kalpa Retreat" class="stay-img">
+                    <span class="stay-badge hotel-badge">Retreat</span>
+                </div>
+                <div class="stay-content">
+                    <h3 class="stay-title">Hotel Kalpa Retreat</h3>
+                    <p class="stay-desc">Offers luxury and comfort amidst the apple orchards, blending modern amenities with traditional aesthetics.</p>
+                </div>
+            </div>
 
-        // Highlight the active tab (red)
-        const activeTab = document.getElementById(`tab-${mode}`);
-        activeTab.classList.remove('text-gray-400');
-        activeTab.classList.add('text-red-500', 'border-b-2', 'border-red-500');
+            <!-- Homestay Card -->
+            <div class="stay-card">
+                <div class="stay-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1505691938895-1758d7bef511?q=80&w=800&auto=format&fit=crop" alt="Whistling Pines Homestay" class="stay-img">
+                    <span class="stay-badge homestay-badge">Homestay</span>
+                </div>
+                <div class="stay-content">
+                    <h3 class="stay-title">Whistling Pines Homestay</h3>
+                    <p class="stay-desc">A cozy, family-run homestay offering authentic Kinnauri meals and a true local living experience.</p>
+                </div>
+            </div>
 
-        // Update Button Text
-        const searchBtn = document.getElementById('search-btn');
-        if (mode === 'flight') {
-            searchBtn.innerText = 'Search Flights';
-        } else if (mode === 'train') {
-            searchBtn.innerText = 'Search Trains';
-        } else if (mode === 'bus') {
-            searchBtn.innerText = 'Search HRTC Buses';
-        }
-    }
+            <!-- Homestay Card -->
+            <div class="stay-card">
+                <div class="stay-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=800&auto=format&fit=crop" alt="Palmo Homestay" class="stay-img">
+                    <span class="stay-badge homestay-badge">Homestay</span>
+                </div>
+                <div class="stay-content">
+                    <h3 class="stay-title">Palmo Homestay</h3>
+                    <p class="stay-desc">Budget-friendly and warm, perfect for backpackers and travelers looking to immerse in local culture.</p>
+                </div>
+            </div>
+            
+             <!-- Hostel Card -->
+            <div class="stay-card">
+                <div class="stay-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=800&auto=format&fit=crop" alt="Zostel Kalpa" class="stay-img">
+                    <span class="stay-badge hostel-badge">Hostel</span>
+                </div>
+                <div class="stay-content">
+                    <h3 class="stay-title">Zostel Kalpa</h3>
+                    <p class="stay-desc">A vibrant backpacker hostel perfect for socializing, offering dorms and private rooms with stunning mountain views.</p>
+                </div>
+            </div>
+            
+            <!-- Homestay Card -->
+            <div class="stay-card">
+                <div class="stay-img-wrap">
+                    <img src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=800&auto=format&fit=crop" alt="Rudra Homestays" class="stay-img">
+                    <span class="stay-badge homestay-badge">Homestay</span>
+                </div>
+                <div class="stay-content">
+                    <h3 class="stay-title">Rudra Homestays</h3>
+                    <p class="stay-desc">Rustic and deeply rooted in tradition, experience Kalpa like a true local.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
-    function handleSearch() {
-        // Redirect based on the selected tab
-        if (currentMode === 'flight') {
-            window.open('https://www.makemytrip.com/flights/', '_blank');
-        } else if (currentMode === 'train') {
-            window.open('https://www.irctc.co.in/nget/', '_blank');
-        } else if (currentMode === 'bus') {
-            window.open('https://www.hrtchp.com/', '_blank');
-        }
-    }
-</script>
+<!-- Modals for Destinations -->
+<div class="modal-overlay" id="modal-overlay"></div>
 
+<div class="modal" id="modal-kailash">
+    <button class="modal-close">&times;</button>
+    <img src="https://images.unsplash.com/photo-1626082895617-2c6ab557088b?q=80&w=800&auto=format&fit=crop" alt="Kinner Kailash" class="modal-img">
+    <div class="modal-body">
+        <h3>Kinnaur Kailash Range</h3>
+        <p>The primary attraction of Kalpa is the breathtaking, panoramic view of the Kinnaur Kailash range. Watching the sunrise or sunset, when the golden light hits the sacred Shivling-shaped peak, is considered one of the best experiences in the village. It is a deeply spiritual site for both Hindus and Buddhists.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal-suicide">
+    <button class="modal-close">&times;</button>
+    <img src="https://images.unsplash.com/photo-1593351415075-3bac9f45c877?q=80&w=800&auto=format&fit=crop" alt="Suicide Point" class="modal-img">
+    <div class="modal-body">
+        <h3>Suicide Point</h3>
+        <p>Located a few kilometers from Kalpa on the way to Roghi village, this spot is famous for its dramatic, steep cliffs and expansive views of the Sutlej River Valley. Despite its grim name, it is a highly popular viewpoint and a spectacular location for photography and experiencing the sheer scale of the Himalayas.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal-roghi">
+    <button class="modal-close">&times;</button>
+    <img src="https://images.unsplash.com/photo-1588693959306-444458d6e3f5?q=80&w=800&auto=format&fit=crop" alt="Roghi Village" class="modal-img">
+    <div class="modal-body">
+        <h3>Roghi Village</h3>
+        <p>Famous for its traditional Kinnauri houses and local way of life, the drive to Roghi village is as scenic as the destination itself. It offers deep insights into the heritage, culture, and daily life of the Kinnaur region, all surrounded by beautiful, lush apple orchards.</p>
+    </div>
+</div>
+
+<div class="modal" id="modal-temple">
+    <button class="modal-close">&times;</button>
+    <img src="https://images.unsplash.com/photo-1605640840424-4f056d691e84?q=80&w=800&auto=format&fit=crop" alt="Narayan-Nagini Temple" class="modal-img">
+    <div class="modal-body">
+        <h3>Narayan-Nagini Temple</h3>
+        <p>A masterpiece of traditional Kinnauri architecture, this temple features intricate wooden carvings and a pagoda-style roof. It reflects the region's spiritual diversity, seamlessly blending Hindu and local mythologies. It is a must-visit for anyone interested in history and craftsmanship.</p>
+    </div>
+</div>
+
+<!-- Linking our logic -->
+<script src="script.js"></script>
 </body>
 </html>
