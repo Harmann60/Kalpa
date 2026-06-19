@@ -686,6 +686,207 @@ h3 {
   transform: translateY(0);
 }
 
+/* --- Sub Navigation --- */
+.subnav-container {
+  background: var(--surface-light);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 1rem 5%;
+  display: flex;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 90;
+}
+
+.subnav-container.sticky {
+  position: fixed;
+  top: var(--nav-height);
+  left: 0;
+  width: 100%;
+  background: rgba(10, 10, 12, 0.95);
+  backdrop-filter: var(--glass-blur);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.subnav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.subnav-links li a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: color 0.3s ease;
+}
+
+.subnav-links li a:hover {
+  color: var(--accent-primary);
+}
+
+/* --- Experience Metadata (Interlaken style) --- */
+.meta-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+}
+
+.gallery-item:hover .meta-badges {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.meta-badge {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: #fff;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+/* --- Event Cards --- */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.event-card {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  background: var(--surface-light);
+  border: 1px solid var(--glass-border);
+  transition: transform 0.4s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--accent-secondary);
+}
+
+.event-date-badge {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background: var(--accent-gradient);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 1.1;
+  box-shadow: 0 5px 15px rgba(235, 94, 40, 0.4);
+  z-index: 10;
+}
+
+.event-date-badge span {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.event-content {
+  padding: 1.5rem;
+}
+
+.event-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Accordions --- */
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.accordion-item {
+  background: var(--surface-light);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.accordion-item.open {
+  border-color: var(--accent-primary);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-main);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion-icon {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  transition: transform 0.3s ease;
+}
+
+.accordion-item.open .accordion-icon {
+  transform: rotate(45deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: rgba(0,0,0,0.2);
+}
+
+.accordion-inner {
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  color: var(--text-muted);
+}
+
+/* --- Horizontal Slider (Accommodations) --- */
+.horizontal-slider {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0 2rem 0;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.horizontal-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.horizontal-slider .stay-card {
+  min-width: 320px;
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+
 /* --- Responsive --- */
 @media (max-width: 992px) {
   .transport-grid {

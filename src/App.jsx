@@ -1,7 +1,9 @@
 import Navbar from './components/Navbar';
+import SubNav from './components/SubNav';
 import Hero from './components/Hero';
 import Planning from './components/Planning';
-import Destinations from './components/Destinations';
+import Experiences from './components/Experiences';
+import Events from './components/Events';
 import Accommodations from './components/Accommodations';
 import { useEffect } from 'react';
 
@@ -36,9 +38,11 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <Planning />
-      <Destinations />
+      <SubNav />
+      <Experiences />
+      <Events />
       <Accommodations />
+      <Planning />
     </>
   );
 }

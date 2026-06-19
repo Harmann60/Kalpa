@@ -1,37 +1,47 @@
 import { useState } from 'react';
+import Accordion from './Accordion';
 
 export default function Planning() {
     const [mode, setMode] = useState('flight');
 
+    const handleSearch = () => {
+        if (mode === 'flight') window.open('https://www.makemytrip.com/flights/', '_blank');
+        else if (mode === 'train') window.open('https://www.irctc.co.in/nget/', '_blank');
+        else if (mode === 'bus') window.open('https://www.hrtchp.com/', '_blank');
+    };
+
     return (
         <section id="planning" className="section">
             <div className="container reveal">
-                <h2 className="text-gradient">Journey to the Clouds.</h2>
-                <p className="subtitle" style={{ marginBottom: "2rem" }}>Plan your ascent to the Kinnaur valley.</p>
+                <h2 className="text-gradient">Travel Logistics.</h2>
+                <p className="subtitle" style={{ marginBottom: "2rem" }}>Plan your ascent to the Kinnaur valley with essential details.</p>
                 
                 <div className="transport-grid">
-                    <div className="logistics-panel">
-                        <div className="logistics-item">
-                            <h3 className="logistics-title">By Flight ✈️</h3>
-                            <p className="logistics-desc">
-                                The nearest airports are <strong>Shimla Airport (Jubbarhatti)</strong> (approx. 245–275 km, 7–9 hrs drive) and <strong>Chandigarh Airport</strong> (approx. 330–350 km, 10–12 hrs drive).
-                            </p>
-                        </div>
+                    <div className="logistics-panel accordion-wrapper">
+                        <Accordion title="Weather & Best Time to Visit" defaultOpen={true}>
+                            <p><strong>Summer (Apr - Jun):</strong> 8°C to 24°C. Perfect for sightseeing and clear views of the Kailash range.</p>
+                            <p style={{marginTop: '0.5rem'}}><strong>Monsoon (Jul - Sep):</strong> Heavy rainfall can cause landslides on NH5. Travel with caution.</p>
+                            <p style={{marginTop: '0.5rem'}}><strong>Winter (Oct - Mar):</strong> Temperatures drop below freezing (-5°C to 10°C). Ideal for snow lovers, though many roads may close temporarily.</p>
+                        </Accordion>
                         
-                        <div className="logistics-item">
-                            <h3 className="logistics-title">By Road 🚙</h3>
-                            <p className="logistics-desc">
-                                <strong>Route 1 (Primary):</strong> Shimla-Kinnaur route via NH5. This is the recommended route offering gradual acclimatization. <br />
-                                <strong>Route 2 (Spiti Circuit):</strong> Manali-Kaza route. Travel from Manali via Kunzum Pass to Kaza and then Kalpa. <em>(Note: Kunzum Pass is closed in winter).</em>
-                            </p>
-                        </div>
+                        <Accordion title="Road Conditions & Routes">
+                            <p><strong>Route 1 (Primary):</strong> Shimla-Kinnaur route via NH5. This is the recommended route offering gradual acclimatization. It is mostly well-maintained by BRO.</p>
+                            <p style={{marginTop: '0.5rem'}}><strong>Route 2 (Spiti Circuit):</strong> Manali-Kaza route. Travel from Manali via Kunzum Pass to Kaza and then Kalpa. <em>(Note: Kunzum Pass is closed in winter).</em></p>
+                        </Accordion>
 
-                        <div className="logistics-item">
-                            <h3 className="logistics-title">By Train & Bus 🚆🚌</h3>
-                            <p className="logistics-desc">
-                                The nearest railway stations are <strong>Kalka</strong> and <strong>Shimla</strong>. From there, you can take reliable <strong>HRTC buses</strong> or private buses to Reckong Peo. From Reckong Peo, local buses and taxis easily connect to Kalpa (10 km).
-                            </p>
-                        </div>
+                        <Accordion title="Permits & Regulations">
+                            <p><strong>Indian Citizens:</strong> No special permits are required to visit Kalpa or Reckong Peo.</p>
+                            <p style={{marginTop: '0.5rem'}}><strong>Foreign Nationals:</strong> An Inner Line Permit (ILP) is required if you are traveling beyond Reckong Peo towards Spiti Valley (Sumdo border). Permits can be obtained at the SDM office in Reckong Peo.</p>
+                        </Accordion>
+                        
+                        <Accordion title="Essential Packing List">
+                            <ul style={{ paddingLeft: '1.2rem', marginTop: '0.5rem' }}>
+                                <li>Heavy woolens and thermals (especially for winter)</li>
+                                <li>Sturdy trekking shoes and windproof jacket</li>
+                                <li>Basic medical kit for altitude sickness (Diamox)</li>
+                                <li>Cash (ATMs in Reckong Peo can occasionally run out)</li>
+                            </ul>
+                        </Accordion>
                     </div>
 
                     <div className="glass-panel">
@@ -57,11 +67,7 @@ export default function Planning() {
                             <span className="input-label">To</span>
                             <input type="text" value="Shimla / Kalpa" readOnly className="input-field" style={{ cursor: "not-allowed", color: "var(--text-muted)" }} />
                         </div>
-                        <button id="search-btn" className="btn-primary btn-full" onClick={() => {
-                            if (mode === 'flight') window.open('https://www.makemytrip.com/flights/', '_blank');
-                            else if (mode === 'train') window.open('https://www.irctc.co.in/nget/', '_blank');
-                            else if (mode === 'bus') window.open('https://www.hrtchp.com/', '_blank');
-                        }}>
+                        <button id="search-btn" className="btn-primary btn-full" onClick={handleSearch}>
                             {mode === 'flight' ? 'Search Flights' : mode === 'train' ? 'Search Trains' : 'Search HRTC Buses'}
                         </button>
                     </div>

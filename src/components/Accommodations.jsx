@@ -52,7 +52,7 @@ export default function Accommodations() {
                 <h2 className="text-gradient">Stays & Hospitality.</h2>
                 <p className="subtitle">Experience the warmth of Kinnauri hospitality.</p>
 
-                <div className="stays-grid">
+                <div className="horizontal-slider">
                     {staysData.map((stay, index) => (
                         <StayCard 
                             key={index}
