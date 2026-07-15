@@ -37,6 +37,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-color);
@@ -226,6 +230,7 @@ h3 {
 /* --- Section Layout --- */
 .section {
   padding: 100px 5%;
+  scroll-margin-top: calc(var(--nav-height) + 72px);
 }
 
 .container {
@@ -332,6 +337,26 @@ h3 {
 .btn-full {
   width: 100%;
   margin-top: 1rem;
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: 0 4px 15px rgba(235, 94, 40, 0.2);
+}
+
+.form-feedback {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+}
+
+.form-feedback-error {
+  color: #ff8585;
+}
+
+.form-feedback-success {
+  color: #9ff0ae;
 }
 
 .feature-cards {
@@ -904,6 +929,24 @@ h3 {
   .nav-links, .nav-actions .lang-switch {
     display: none;
   }
+
+  .subnav-container {
+    justify-content: flex-start;
+    padding: 1rem 1rem;
+  }
+
+  .subnav-links {
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 1.25rem;
+    scrollbar-width: none;
+  }
+
+  .subnav-links::-webkit-scrollbar {
+    display: none;
+  }
+
   .feature-cards {
     grid-template-columns: 1fr;
   }
