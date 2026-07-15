@@ -25,7 +25,7 @@ export default function Navbar() {
             </ul>
             <div className="nav-actions">
                 <span className="lang-switch" style={{ fontWeight: 600, fontSize: "0.9rem" }}>EN | HI</span>
-                <button className="btn-primary">Visit Kalpa</button>
+                <a href="#planning" className="btn-primary">Plan Visit</a>
             </div>
         </nav>
     );

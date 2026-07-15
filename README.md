@@ -1,16 +1,42 @@
-# React + Vite
+# Kalpa Tourism Website (React + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page tourism website for Kalpa with key travel flows:
+- destination highlights and modal details
+- event calendar
+- stays/accommodations explorer
+- travel planning form with validation and user feedback
 
-Currently, two official plugins are available:
+## Stack
+- React 19
+- Vite 8
+- ESLint 10
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Local setup
+From the repository root:
 
-## React Compiler
+```bash
+npm ci
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run in development
+```bash
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Build for production
+```bash
+npm run build
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Lint
+```bash
+npm run lint
+```
+
+## Verify key flows
+1. Open the app and confirm top navigation links scroll to sections.
+2. In **Travel Logistics**, enter a departure city and search for Flights/Trains/HRTC.
+3. Confirm validation appears for empty/short input and success feedback appears when a search opens.
+4. Check responsive behavior on mobile/tablet/desktop:
+   - section links remain usable
+   - sub-navigation can be horizontally scrolled on small screens.

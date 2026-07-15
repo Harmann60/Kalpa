@@ -3,11 +3,55 @@ import Accordion from './Accordion';
 
 export default function Planning() {
     const [mode, setMode] = useState('flight');
+    const [fromLocation, setFromLocation] = useState('');
+    const [formError, setFormError] = useState('');
+    const [feedback, setFeedback] = useState('');
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSearch = () => {
-        if (mode === 'flight') window.open('https://www.makemytrip.com/flights/', '_blank');
-        else if (mode === 'train') window.open('https://www.irctc.co.in/nget/', '_blank');
-        else if (mode === 'bus') window.open('https://www.hrtchp.com/', '_blank');
+    const providers = {
+        flight: {
+            label: 'Flights',
+            baseUrl: 'https://www.makemytrip.com/flights/',
+        },
+        train: {
+            label: 'Trains',
+            baseUrl: 'https://www.irctc.co.in/nget/',
+        },
+        bus: {
+            label: 'Buses',
+            baseUrl: 'https://www.hrtchp.com/',
+        },
+    };
+
+    const handleSearch = (event) => {
+        event.preventDefault();
+        const departure = fromLocation.trim();
+        if (departure.length < 2) {
+            setFormError('Please enter a valid departure city (at least 2 characters).');
+            setFeedback('');
+            return;
+        }
+
+        const provider = providers[mode];
+        const searchParams = new URLSearchParams({
+            from: departure,
+            to: 'Shimla / Kalpa',
+        });
+
+        setIsSubmitting(true);
+        setFormError('');
+        setFeedback('');
+
+        const targetUrl = `${provider.baseUrl}?${searchParams.toString()}`;
+        const openedWindow = window.open(targetUrl, '_blank', 'noopener,noreferrer');
+        if (!openedWindow) {
+            setFormError('Popup was blocked by the browser. Please allow popups and try again.');
+            setIsSubmitting(false);
+            return;
+        }
+
+        setFeedback(`Opening ${provider.label} options from ${departure}...`);
+        setIsSubmitting(false);
     };
 
     return (
@@ -44,33 +88,57 @@ export default function Planning() {
                         </Accordion>
                     </div>
 
-                    <div className="glass-panel">
+                    <form className="glass-panel" onSubmit={handleSearch} noValidate>
                         <div className="tabs">
                             <button 
+                                type="button"
                                 className={`tab-btn ${mode === 'flight' ? 'active' : ''}`} 
                                 onClick={() => setMode('flight')}
                             >Flights</button>
                             <button 
+                                type="button"
                                 className={`tab-btn ${mode === 'train' ? 'active' : ''}`} 
                                 onClick={() => setMode('train')}
                             >Railway</button>
                             <button 
+                                type="button"
                                 className={`tab-btn ${mode === 'bus' ? 'active' : ''}`} 
                                 onClick={() => setMode('bus')}
                             >HRTC</button>
                         </div>
                         <div className="input-group">
                             <span className="input-label">From</span>
-                            <input type="text" placeholder="Departure City" className="input-field" />
+                            <input
+                                type="text"
+                                placeholder="Departure City"
+                                className="input-field"
+                                value={fromLocation}
+                                onChange={(event) => setFromLocation(event.target.value)}
+                                aria-invalid={!!formError}
+                                aria-describedby={formError ? 'planning-form-error' : undefined}
+                                required
+                            />
                         </div>
                         <div className="input-group">
                             <span className="input-label">To</span>
                             <input type="text" value="Shimla / Kalpa" readOnly className="input-field" style={{ cursor: "not-allowed", color: "var(--text-muted)" }} />
                         </div>
-                        <button id="search-btn" className="btn-primary btn-full" onClick={handleSearch}>
-                            {mode === 'flight' ? 'Search Flights' : mode === 'train' ? 'Search Trains' : 'Search HRTC Buses'}
+                        {formError ? (
+                            <p id="planning-form-error" className="form-feedback form-feedback-error" role="alert">{formError}</p>
+                        ) : null}
+                        {feedback ? (
+                            <p className="form-feedback form-feedback-success" role="status">{feedback}</p>
+                        ) : null}
+                        <button id="search-btn" className="btn-primary btn-full" type="submit" disabled={isSubmitting}>
+                            {isSubmitting
+                                ? 'Opening...'
+                                : mode === 'flight'
+                                    ? 'Search Flights'
+                                    : mode === 'train'
+                                        ? 'Search Trains'
+                                        : 'Search HRTC Buses'}
                         </button>
-                    </div>
+                    </form>
                 </div>
             </div>
         </section>
