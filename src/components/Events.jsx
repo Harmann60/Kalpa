@@ -5,7 +5,7 @@ export default function Events() {
     const { data: eventsData, isLoading, error } = useContentData('/data/events.json', []);
 
     return (
-        <section id="events" className="section" style={{ backgroundColor: "var(--bg-color)" }}>
+        <section id="events" className="section" style={{ backgroundColor: "var(--bg-base)" }}>
             <div className="container reveal">
                 <h2 className="text-gradient">Cultural Calendar.</h2>
                 <p className="subtitle">Immerse yourself in the vibrant traditions and festivals of Kinnaur.</p>

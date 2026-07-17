@@ -1,56 +1,31 @@
-import Navbar from './components/Navbar';
-import SubNav from './components/SubNav';
-import Hero from './components/Hero';
-import Planning from './components/Planning';
-import Experiences from './components/Experiences';
-import Events from './components/Events';
-import Accommodations from './components/Accommodations';
-import { useEffect } from 'react';
-import Testimonials from './components/Testimonials';
-import FAQs from './components/FAQs';
-import ContactSection from './components/ContactSection';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import ExperiencesPage from './pages/ExperiencesPage';
+import EventsPage from './pages/EventsPage';
+import StaysPage from './pages/StaysPage';
+import ReviewsPage from './pages/ReviewsPage';
+import FAQPage from './pages/FAQPage';
+import PlanningPage from './pages/PlanningPage';
+import ContactPage from './pages/ContactPage';
 
 function App() {
-  // Intersection Observer for the reveal animation
-  useEffect(() => {
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    const revealElements = document.querySelectorAll('.reveal');
-    revealElements.forEach(el => observer.observe(el));
-
-    return () => {
-      revealElements.forEach(el => observer.unobserve(el));
-      observer.disconnect();
-    };
-  }, []);
-
-  return (
-    <>
-      <Navbar />
-      <Hero />
-      <SubNav />
-      <Experiences />
-      <Events />
-      <Accommodations />
-      <Testimonials />
-      <FAQs />
-      <Planning />
-      <ContactSection />
-    </>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route element={<Layout />}>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/experiences" element={<ExperiencesPage />} />
+                    <Route path="/events" element={<EventsPage />} />
+                    <Route path="/stays" element={<StaysPage />} />
+                    <Route path="/reviews" element={<ReviewsPage />} />
+                    <Route path="/faq" element={<FAQPage />} />
+                    <Route path="/planning" element={<PlanningPage />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

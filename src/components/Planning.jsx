@@ -123,7 +123,7 @@ export default function Planning() {
                         </div>
                         <div className="input-group">
                             <span className="input-label">To</span>
-                            <input type="text" value="Shimla / Kalpa" readOnly className="input-field" style={{ cursor: "not-allowed", color: "var(--text-muted)" }} />
+                            <input type="text" value="Shimla / Kalpa" readOnly className="input-field" style={{ cursor: "not-allowed", color: "var(--text-secondary)" }} />
                         </div>
                         {formError ? (
                             <p id="planning-form-error" className="form-feedback form-feedback-error" role="alert">{formError}</p>

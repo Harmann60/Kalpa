@@ -7,7 +7,7 @@ export default function Hero() {
             <div className="hero-overlay"></div>
             <div className="hero-content">
                 <h1 className="hero-title text-gradient">KALPA</h1>
-                <p className="subtitle">Where the sacred Kinner Kailash touches the sky.</p>
+                <p className="hero-subtitle">Where the sacred Kinner Kailash touches the sky.</p>
             </div>
         </header>
     );

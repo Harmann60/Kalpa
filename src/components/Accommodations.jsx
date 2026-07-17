@@ -19,7 +19,7 @@ export default function Accommodations() {
     }, [staysData, typeFilter, sortOrder]);
 
     return (
-        <section id="accommodations" className="section" style={{ backgroundColor: "var(--surface-color)" }}>
+        <section id="accommodations" className="section" style={{ backgroundColor: "var(--bg-surface)" }}>
             <div className="container reveal">
                 <h2 className="text-gradient">Stays & Hospitality.</h2>
                 <p className="subtitle">Experience the warmth of Kinnauri hospitality.</p>
