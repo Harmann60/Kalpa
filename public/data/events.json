@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "date": "14",
+    "month": "Jan",
+    "title": "Sazo Festival",
+    "desc": "Traditional ritual season where village deities are ceremonially bathed before departure.",
+    "image": "https://images.unsplash.com/photo-1544256718-3baf2e4c47bb?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "id": 2,
+    "date": "02",
+    "month": "Sep",
+    "title": "Fulaich (Festival of Flowers)",
+    "desc": "A vibrant autumn celebration with Kinnauri dance, music, and floral processions.",
+    "image": "https://images.unsplash.com/photo-1533422902776-563b784a32c2?q=80&w=800&auto=format&fit=crop"
+  },
+  {
+    "id": 3,
+    "date": "13",
+    "month": "Apr",
+    "title": "Beesh (Vaisakhi)",
+    "desc": "New year festivities with fairs, local food, and traditional archery gatherings.",
+    "image": "https://images.unsplash.com/photo-1514222709107-a180c68d72b4?q=80&w=800&auto=format&fit=crop"
+  }
+]

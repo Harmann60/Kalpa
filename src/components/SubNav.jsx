@@ -23,7 +23,9 @@ export default function SubNav() {
                 <li><a href="#destinations">Highlights</a></li>
                 <li><a href="#events">Events</a></li>
                 <li><a href="#accommodations">Stays</a></li>
+                <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#planning">Travel Info</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     );

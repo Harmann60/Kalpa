@@ -3,12 +3,12 @@ export default function Modal({ isOpen, onClose, destination }) {
 
     return (
         <>
-            <div className="modal-overlay active" onClick={onClose}></div>
-            <div className="modal active">
-                <button className="modal-close" onClick={onClose}>&times;</button>
+            <div className="modal-overlay active" onClick={onClose} aria-hidden="true"></div>
+            <div className="modal active" role="dialog" aria-modal="true" aria-labelledby="destination-modal-title">
+                <button className="modal-close" onClick={onClose} aria-label="Close details">&times;</button>
                 <img src={destination.modalImage} alt={destination.title} className="modal-img" />
                 <div className="modal-body">
-                    <h3>{destination.title}</h3>
+                    <h3 id="destination-modal-title">{destination.title}</h3>
                     <p>{destination.modalDesc}</p>
                 </div>
             </div>

@@ -6,6 +6,9 @@ import Experiences from './components/Experiences';
 import Events from './components/Events';
 import Accommodations from './components/Accommodations';
 import { useEffect } from 'react';
+import Testimonials from './components/Testimonials';
+import FAQs from './components/FAQs';
+import ContactSection from './components/ContactSection';
 
 function App() {
   // Intersection Observer for the reveal animation
@@ -42,7 +45,10 @@ function App() {
       <Experiences />
       <Events />
       <Accommodations />
+      <Testimonials />
+      <FAQs />
       <Planning />
+      <ContactSection />
     </>
   );
 }

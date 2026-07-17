@@ -1,6 +1,11 @@
 export default function ExperienceCard({ itemClass, image, tag, title, desc, meta, onClick }) {
     return (
-        <div className={`gallery-item ${itemClass}`} onClick={onClick}>
+        <button
+            type="button"
+            className={`gallery-item ${itemClass}`}
+            onClick={onClick}
+            aria-label={`Open details for ${title}`}
+        >
             <img src={image} alt={title} className="gallery-img" />
             <div className="gallery-overlay">
                 <div className="gallery-content">
@@ -18,6 +23,6 @@ export default function ExperienceCard({ itemClass, image, tag, title, desc, met
                     )}
                 </div>
             </div>
-        </div>
+        </button>
     );
 }

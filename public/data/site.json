@@ -1,0 +1,46 @@
+{
+  "contacts": {
+    "phone": "+91 78000 12345",
+    "email": "travel@kalpa-tourism.in",
+    "address": "Tourism Information Desk, Kalpa, Kinnaur, Himachal Pradesh",
+    "officeHours": "Daily, 9:00 AM - 6:00 PM",
+    "mapUrl": "https://maps.google.com/?q=Kalpa+Kinnaur+Himachal+Pradesh"
+  },
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Ananya S.",
+      "tripType": "Family Trip",
+      "quote": "The planning section made our route and weather prep easy. Kalpa was magical and stress-free."
+    },
+    {
+      "id": 2,
+      "name": "Raghav M.",
+      "tripType": "Backpacking",
+      "quote": "Used the stay filters, picked a hostel in minutes, and had instant contact details for local support."
+    },
+    {
+      "id": 3,
+      "name": "Lea T.",
+      "tripType": "International Traveler",
+      "quote": "Clear permit information and map links were exactly what I needed before heading to Kinnaur."
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "Can I directly book stays from this website?",
+      "answer": "You can view prices, availability, and open verified partner booking pages. You can also send an inquiry from this site."
+    },
+    {
+      "id": 2,
+      "question": "What is your cancellation/refund policy?",
+      "answer": "Cancellation and refund policies are set by each stay provider. Please review the provider's terms before confirming payment."
+    },
+    {
+      "id": 3,
+      "question": "Do international travelers need permits?",
+      "answer": "No permit is needed for Kalpa itself. An Inner Line Permit may be required for travel beyond Reckong Peo towards restricted border areas."
+    }
+  ]
+}

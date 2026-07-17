@@ -21,11 +21,13 @@ export default function Navbar() {
             <ul className="nav-links">
                 <li><a href="#destinations">Destinations</a></li>
                 <li><a href="#accommodations">Stays</a></li>
+                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#planning">Planning</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
             <div className="nav-actions">
                 <span className="lang-switch" style={{ fontWeight: 600, fontSize: "0.9rem" }}>EN | HI</span>
-                <a href="#planning" className="btn-primary">Plan Visit</a>
+                <a href="#contact" className="btn-primary">Plan Visit</a>
             </div>
         </nav>
     );
