@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Accordion from './Accordion';
+import { trackEvent } from '../utils/analytics';
 
 export default function Planning() {
     const [mode, setMode] = useState('flight');
@@ -51,6 +52,7 @@ export default function Planning() {
         }
 
         setFeedback(`Opening ${provider.label} options from ${departure}...`);
+        trackEvent('travel_search_opened', { mode, departure });
         setIsSubmitting(false);
     };
 

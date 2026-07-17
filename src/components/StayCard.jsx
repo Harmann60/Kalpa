@@ -1,4 +1,4 @@
-export default function StayCard({ image, type, badgeClass, title, desc }) {
+export default function StayCard({ image, type, badgeClass, title, desc, onViewDetails }) {
     return (
         <div className="stay-card">
             <div className="stay-img-wrap">
@@ -8,6 +8,9 @@ export default function StayCard({ image, type, badgeClass, title, desc }) {
             <div className="stay-content">
                 <h3 className="stay-title">{title}</h3>
                 <p className="stay-desc">{desc}</p>
+                <button type="button" className="btn-primary stay-cta" onClick={onViewDetails}>
+                    View Details
+                </button>
             </div>
         </div>
     );

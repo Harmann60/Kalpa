@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kalpa-tourism.vercel.app/sitemap.xml

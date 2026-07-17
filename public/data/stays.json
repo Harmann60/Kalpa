@@ -1,0 +1,80 @@
+[
+  {
+    "id": "rakpa-regency",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?q=80&w=800&auto=format&fit=crop",
+    "type": "Hotel",
+    "badgeClass": "hotel-badge",
+    "title": "Hotel Rakpa Regency",
+    "desc": "Premium mountain-view property with private balconies facing the Kinnaur Kailash range.",
+    "priceFrom": 5600,
+    "availability": "Limited rooms this week",
+    "locationMap": "https://maps.google.com/?q=Kalpa",
+    "bookingUrl": "https://www.booking.com/",
+    "rating": 4.6
+  },
+  {
+    "id": "kalpa-retreat",
+    "image": "https://images.unsplash.com/photo-1498503182468-3b51cbb6cb24?q=80&w=800&auto=format&fit=crop",
+    "type": "Retreat",
+    "badgeClass": "hotel-badge",
+    "title": "Kalpa Retreat",
+    "desc": "Comfort-focused stay amid apple orchards with curated local experiences.",
+    "priceFrom": 6200,
+    "availability": "Available",
+    "locationMap": "https://maps.google.com/?q=Kalpa+Retreat",
+    "bookingUrl": "https://www.booking.com/",
+    "rating": 4.5
+  },
+  {
+    "id": "whistling-pines",
+    "image": "https://images.unsplash.com/photo-1505691938895-1758d7bef511?q=80&w=800&auto=format&fit=crop",
+    "type": "Homestay",
+    "badgeClass": "homestay-badge",
+    "title": "Whistling Pines Homestay",
+    "desc": "Family-run homestay with authentic Kinnauri meals and orchard views.",
+    "priceFrom": 2400,
+    "availability": "Available",
+    "locationMap": "https://maps.google.com/?q=Whistling+Pines+Homestay+Kalpa",
+    "bookingUrl": "https://www.airbnb.com/",
+    "rating": 4.7
+  },
+  {
+    "id": "palmo-homestay",
+    "image": "https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=800&auto=format&fit=crop",
+    "type": "Homestay",
+    "badgeClass": "homestay-badge",
+    "title": "Palmo Homestay",
+    "desc": "Budget-friendly and warm, ideal for culture-focused backpackers.",
+    "priceFrom": 1800,
+    "availability": "Few rooms left",
+    "locationMap": "https://maps.google.com/?q=Palmo+Homestay+Kalpa",
+    "bookingUrl": "https://www.airbnb.com/",
+    "rating": 4.3
+  },
+  {
+    "id": "zostel-kalpa",
+    "image": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?q=80&w=800&auto=format&fit=crop",
+    "type": "Hostel",
+    "badgeClass": "hostel-badge",
+    "title": "Zostel Kalpa",
+    "desc": "Social backpacker stay with dorms, private rooms, and community events.",
+    "priceFrom": 999,
+    "availability": "Available",
+    "locationMap": "https://maps.google.com/?q=Zostel+Kalpa",
+    "bookingUrl": "https://www.zostel.com/",
+    "rating": 4.4
+  },
+  {
+    "id": "rudra-homestays",
+    "image": "https://images.unsplash.com/photo-1510798831971-661eb04b3739?q=80&w=800&auto=format&fit=crop",
+    "type": "Homestay",
+    "badgeClass": "homestay-badge",
+    "title": "Rudra Homestays",
+    "desc": "Traditional stay option with peaceful location and local host guidance.",
+    "priceFrom": 2200,
+    "availability": "Available",
+    "locationMap": "https://maps.google.com/?q=Rudra+Homestay+Kalpa",
+    "bookingUrl": "https://www.airbnb.com/",
+    "rating": 4.2
+  }
+]
