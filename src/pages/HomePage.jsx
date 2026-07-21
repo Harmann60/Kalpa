@@ -59,8 +59,8 @@ export default function HomePage() {
                                     />
                                 </div>
                                 <div className="editorial-intro__accent-box">
-                                    <span>&#10024; Featured in</span>
-                                    <strong>Himalayan Journal 2024</strong>
+                                    <span>&#10024; Nestled at</span>
+                                    <strong>2,960m in Kinnaur, HP</strong>
                                 </div>
                             </div>
                         </div>
@@ -69,49 +69,6 @@ export default function HomePage() {
             </section>
 
             <SectionDivider label="Curated" />
-
-            <section className="section editorial-hot-links">
-                <div className="container">
-                    <ScrollReveal>
-                        <div className="editorial-hot-links__header">
-                            <span className="editorial-hot-links__label">From the Journal</span>
-                            <h2 className="editorial-hot-links__title">What makes Kalpa extraordinary</h2>
-                        </div>
-                    </ScrollReveal>
-                    <div className="editorial-hot-links__grid">
-                        <ScrollReveal delay={0}>
-                            <EditorialCard
-                                image="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80"
-                                tag="Experiences"
-                                title="Kinner Kailash Parikrama"
-                                desc="The 12-day circumambulation of the sacred mountain is one of India's most revered Himalayan pilgrimages."
-                                link="/experiences"
-                                size="large"
-                            />
-                        </ScrollReveal>
-                        <ScrollReveal delay={100}>
-                            <EditorialCard
-                                image="https://images.unsplash.com/photo-1570197571499-166b36435e9f?w=600&q=80"
-                                tag="Culture"
-                                title="Fulaich Festival"
-                                desc="Flowers, music, and centuries-old Kinnauri dance traditions come alive each September."
-                                link="/events"
-                                size="medium"
-                            />
-                        </ScrollReveal>
-                        <ScrollReveal delay={200}>
-                            <EditorialCard
-                                image="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=600&q=80"
-                                tag="Stays"
-                                title="Heritage Homestays"
-                                desc="Sleep in centuries-old Kinnauri stone houses with panoramic mountain views."
-                                link="/stays"
-                                size="medium"
-                            />
-                        </ScrollReveal>
-                    </div>
-                </div>
-            </section>
 
             <Experiences />
 
