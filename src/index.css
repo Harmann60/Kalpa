@@ -39,7 +39,23 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
+}
+
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
 }
 
 body {
@@ -215,25 +231,6 @@ h3 {
   padding: 0 24px;
 }
 
-.hero-content--visible .hero-title {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero-content--visible .hero-tagline {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero-content--visible .hero-subtitle {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.hero-content--visible .hero-scroll-cue {
-  opacity: 1;
-}
-
 .hero-title {
   font-size: clamp(6rem, 18vw, 16rem);
   font-weight: 800;
@@ -244,9 +241,6 @@ h3 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 1s cubic-bezier(0.2, 1, 0.3, 1) 0.2s, transform 1s cubic-bezier(0.2, 1, 0.3, 1) 0.2s;
 }
 
 .hero-tagline {
@@ -256,9 +250,6 @@ h3 {
   color: var(--accent-primary);
   font-weight: 600;
   margin-bottom: 1.2rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease 0.6s, transform 0.8s ease 0.6s;
 }
 
 .hero-subtitle {
@@ -268,9 +259,6 @@ h3 {
   font-style: italic;
   max-width: 460px;
   margin: 0 auto;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease 0.9s, transform 0.8s ease 0.9s;
 }
 
 .hero-scroll-cue {
@@ -282,8 +270,6 @@ h3 {
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
-  opacity: 0;
-  transition: opacity 0.8s ease 1.4s;
 }
 
 .hero-scroll-cue__line {
@@ -853,27 +839,9 @@ h3 {
   100% { transform: translateX(-33.333%); }
 }
 
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* --- Scroll Reveal (new system) --- */
-.scroll-reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.9s cubic-bezier(0.2, 1, 0.3, 1), transform 0.9s cubic-bezier(0.2, 1, 0.3, 1);
-}
-
-.scroll-reveal.scroll-visible {
-  opacity: 1;
-  transform: translateY(0);
+/* --- Reveal (GSAP handles animation) --- */
+.reveal, .scroll-reveal {
+  will-change: opacity, transform;
 }
 
 /* --- Marquee --- */
@@ -888,7 +856,6 @@ h3 {
 .marquee-track {
   display: flex;
   width: max-content;
-  animation: marqueeScroll 30s linear infinite;
 }
 
 .marquee-item {

@@ -1,4 +1,8 @@
 import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ScrollReveal({ children, className = '', delay = 0 }) {
     const ref = useRef(null);
@@ -7,23 +11,29 @@ export default function ScrollReveal({ children, className = '', delay = 0 }) {
         const el = ref.current;
         if (!el) return;
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    el.classList.add('scroll-visible');
-                    el.style.transitionDelay = `${delay}ms`;
-                    observer.unobserve(el);
+        const ctx = gsap.context(() => {
+            gsap.fromTo(el,
+                { opacity: 0, y: 40 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.9,
+                    delay: delay / 1000,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: el,
+                        start: 'top 85%',
+                        once: true,
+                    },
                 }
-            },
-            { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
-        );
+            );
+        });
 
-        observer.observe(el);
-        return () => observer.disconnect();
+        return () => ctx.revert();
     }, [delay]);
 
     return (
-        <div ref={ref} className={`scroll-reveal ${className}`}>
+        <div ref={ref} className={`${className}`} style={{ opacity: 0 }}>
             {children}
         </div>
     );
