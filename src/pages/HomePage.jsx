@@ -4,7 +4,6 @@ import QuickInfoBar from '../components/QuickInfoBar';
 import Marquee from '../components/Marquee';
 import SectionDivider from '../components/SectionDivider';
 import ScrollReveal from '../components/ScrollReveal';
-import EditorialCard from '../components/EditorialCard';
 import Experiences from '../components/Experiences';
 import Events from '../components/Events';
 import Accommodations from '../components/Accommodations';
