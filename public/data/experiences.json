@@ -1,20 +1,14 @@
 [
   {
-    "id": "kailash-parikrama",
+    "id": "chakka-meadows-trek",
     "itemClass": "gallery-item-1",
     "tag": "Trek",
-    "title": "Kinnaur Kailash Parikrama",
-    "desc": "A sacred and challenging trek around the Shivling peak.",
-    "difficulty": "Hard",
-    "meta": {
-      "duration": "3-4 Days",
-      "difficulty": "Hard",
-      "altitude": "4,800m",
-      "season": "Aug - Sep"
-    },
+    "title": "Chakka Meadows Hike",
+    "desc": "A day hike through spruce forests and stream-side trails to high-altitude meadows above Kalpa.",
+    "meta": {},
     "image": "https://images.unsplash.com/photo-1626082895617-2c6ab557088b?q=80&w=1200&auto=format&fit=crop",
     "modalImage": "https://images.unsplash.com/photo-1626082895617-2c6ab557088b?q=80&w=800&auto=format&fit=crop",
-    "modalDesc": "The signature Kalpa adventure with stark Himalayan landscapes, high passes, and deeply spiritual viewpoints."
+    "modalDesc": "Chaka Meadows sits at around 3,800m above Kalpa village. The 3km trail follows a stream through fields and cedar forest, opening up to sweeping views of the Kinner Kailash range and Mt Raldang (5,499m). A day hike with no prior trekking experience required — just a sound pair of lungs. Early morning starts are recommended, especially in summer."
   },
   {
     "id": "suicide-point",
@@ -22,14 +16,9 @@
     "tag": "Sightseeing",
     "title": "Roghi Cliff Viewpoint",
     "desc": "Dramatic cliffs with expansive views of the Sutlej valley.",
-    "difficulty": "Easy",
-    "meta": {
-      "duration": "1 Hour",
-      "difficulty": "Easy",
-      "altitude": "2,960m"
-    },
-    "image": "https://images.unsplash.com/photo-1593351415075-3bac9f45c877?q=80&w=800&auto=format&fit=crop",
-    "modalImage": "https://images.unsplash.com/photo-1593351415075-3bac9f45c877?q=80&w=800&auto=format&fit=crop",
+    "meta": {},
+    "image": "/asset/roghicliff.webp",
+    "modalImage": "/asset/roghicliff.webp",
     "modalDesc": "A high-impact viewpoint for travelers wanting dramatic terrain and panoramic photography in a short stop."
   },
   {
@@ -37,17 +26,11 @@
     "itemClass": "gallery-item-3",
     "tag": "Culture",
     "title": "Roghi Village Walk",
-    "desc": "Discover local Kinnauri life amidst apple orchards.",
-    "difficulty": "Easy",
-    "meta": {
-      "duration": "Half Day",
-      "difficulty": "Easy",
-      "altitude": "2,900m",
-      "season": "Year-round"
-    },
-    "image": "https://images.unsplash.com/photo-1588693959306-444458d6e3f5?q=80&w=800&auto=format&fit=crop",
-    "modalImage": "https://images.unsplash.com/photo-1588693959306-444458d6e3f5?q=80&w=800&auto=format&fit=crop",
-    "modalDesc": "A relaxed cultural trail through heritage homes, local orchards, and daily Kinnauri mountain life."
+    "desc": "Step into Kinnauri life — heritage homes, apple orchards, and centuries-old traditions.",
+    "meta": {},
+    "image": "/asset/roghivillage.jpeg",
+    "modalImage": "/asset/roghivillage.jpeg",
+    "modalDesc": "Roghi is a living Kinnauri village perched above the Sutlej valley, where stone-and-wood homes sit among apple orchards and ancient temples. Walk through narrow lanes where daily life unfolds much as it has for generations — women weaving Kinnauri shawls, men tending orchards, and elders gathered near the village devta temple. During the Raulane festival (held for 5-7 days at the Santang deity temple), men dress as the Sauni spirits in red gacchi masks that cover the entire face, dancing ritualistic forms to seek blessings for prosperity. In spring, the Sazo cycle marks when palanquins of the village gods are laid open and temple doors closed — the gods departing for a short rest while villagers clean and polish the temple floors. A relaxed cultural trail through heritage homes, local orchards, and the deep rhythms of Kinnauri mountain life."
   },
   {
     "id": "narayan-temple",
@@ -55,14 +38,9 @@
     "tag": "Spiritual",
     "title": "Narayan-Nagini Temple",
     "desc": "Intricate wooden carvings blending local and Hindu mythology.",
-    "difficulty": "Easy",
-    "meta": {
-      "duration": "1-2 Hours",
-      "difficulty": "Easy",
-      "altitude": "2,960m"
-    },
-    "image": "https://images.unsplash.com/photo-1605640840424-4f056d691e84?q=80&w=1200&auto=format&fit=crop",
-    "modalImage": "https://images.unsplash.com/photo-1605640840424-4f056d691e84?q=80&w=800&auto=format&fit=crop",
+    "meta": {},
+    "image": "/asset/naryanitmeple.webp",
+    "modalImage": "/asset/naryanitmeple.webp",
     "modalDesc": "A temple known for rare Kinnauri woodcraft and pagoda architecture with strong cultural significance."
   }
 ]

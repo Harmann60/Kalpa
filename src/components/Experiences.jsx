@@ -1,4 +1,4 @@
-import { useMemo, useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import ExperienceCard from './ExperienceCard';
 import Modal from './Modal';
 import useContentData from '../hooks/useContentData';
@@ -6,15 +6,8 @@ import { trackEvent } from '../utils/analytics';
 
 export default function Experiences() {
     const [selectedDestination, setSelectedDestination] = useState(null);
-    const [selectedDifficulty, setSelectedDifficulty] = useState('All');
     const { data: experiencesData, isLoading, error } = useContentData('/data/experiences.json', []);
 
-    const filteredExperiences = useMemo(
-        () => experiencesData.filter((item) => selectedDifficulty === 'All' || item.difficulty === selectedDifficulty),
-        [experiencesData, selectedDifficulty]
-    );
-
-    // Close modal on escape key and handle scroll lock
     useEffect(() => {
         const handleKeyDown = (e) => {
             if (e.key === 'Escape') {
@@ -40,27 +33,12 @@ export default function Experiences() {
             <div className="container reveal">
                 <h2>Top Experiences.</h2>
                 <p className="subtitle">Discover the most inspiring activities and sights in Kalpa.</p>
-                <div className="filter-row">
-                    <label htmlFor="experience-difficulty">Difficulty</label>
-                    <select
-                        id="experience-difficulty"
-                        value={selectedDifficulty}
-                        onChange={(event) => setSelectedDifficulty(event.target.value)}
-                    >
-                        <option value="All">All</option>
-                        <option value="Easy">Easy</option>
-                        <option value="Hard">Hard</option>
-                    </select>
-                </div>
 
                 {isLoading ? <p className="form-feedback">Loading experiences...</p> : null}
                 {error ? <p className="form-feedback form-feedback-error">{error}</p> : null}
-                {!isLoading && !error && filteredExperiences.length === 0 ? (
-                    <p className="form-feedback">No experiences available for this filter.</p>
-                ) : null}
 
                 <div className="gallery-grid">
-                    {filteredExperiences.map((dest) => (
+                    {experiencesData.map((dest) => (
                         <ExperienceCard 
                             key={dest.id}
                             itemClass={dest.itemClass}
