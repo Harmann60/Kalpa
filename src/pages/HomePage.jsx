@@ -52,7 +52,7 @@ export default function HomePage() {
                             <div className="editorial-intro__visual">
                                 <div className="editorial-intro__image-frame">
                                     <img
-                                        src="assets/aboutkalpa.png"
+                                        src="/asset/aboutkalpa.png"
                                         alt="Kinner Kailash range at sunrise"
                                         className="editorial-intro__image"
                                         loading="lazy"
