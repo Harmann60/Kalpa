@@ -8,6 +8,7 @@ import ReviewsPage from './pages/ReviewsPage';
 import FAQPage from './pages/FAQPage';
 import PlanningPage from './pages/PlanningPage';
 import ContactPage from './pages/ContactPage';
+import ExperienceDetailPage from './pages/ExperienceDetailPage';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/faq" element={<FAQPage />} />
                     <Route path="/planning" element={<PlanningPage />} />
                     <Route path="/contact" element={<ContactPage />} />
+                    <Route path="/experience/:id" element={<ExperienceDetailPage />} />
                 </Route>
             </Routes>
         </BrowserRouter>

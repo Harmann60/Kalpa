@@ -2,15 +2,12 @@ import { useState } from 'react';
 
 const FALLBACK_BG = 'linear-gradient(135deg, hsl(220, 10%, 14%) 0%, hsl(220, 10%, 20%) 100%)';
 
-export default function ExperienceCard({ itemClass, image, tag, title, desc, meta, onClick }) {
+export default function ExperienceCard({ itemClass, image, tag, title, desc, meta }) {
     const [imgFailed, setImgFailed] = useState(false);
 
     return (
-        <button
-            type="button"
+        <div
             className={`gallery-item ${itemClass}`}
-            onClick={onClick}
-            aria-label={`Open details for ${title}`}
             style={imgFailed ? { background: FALLBACK_BG } : undefined}
         >
             {!imgFailed && (
@@ -37,6 +34,6 @@ export default function ExperienceCard({ itemClass, image, tag, title, desc, met
                     )}
                 </div>
             </div>
-        </button>
+        </div>
     );
 }

@@ -1,32 +1,9 @@
-import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import ExperienceCard from './ExperienceCard';
-import Modal from './Modal';
 import useContentData from '../hooks/useContentData';
-import { trackEvent } from '../utils/analytics';
 
 export default function Experiences() {
-    const [selectedDestination, setSelectedDestination] = useState(null);
     const { data: experiencesData, isLoading, error } = useContentData('/data/experiences.json', []);
-
-    useEffect(() => {
-        const handleKeyDown = (e) => {
-            if (e.key === 'Escape') {
-                setSelectedDestination(null);
-            }
-        };
-        window.addEventListener('keydown', handleKeyDown);
-
-        if (selectedDestination) {
-            document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'auto';
-        }
-
-        return () => {
-            window.removeEventListener('keydown', handleKeyDown);
-            document.body.style.overflow = 'auto';
-        };
-    }, [selectedDestination]);
 
     return (
         <section id="destinations" className="section">
@@ -39,28 +16,23 @@ export default function Experiences() {
 
                 <div className="gallery-grid">
                     {experiencesData.map((dest) => (
-                        <ExperienceCard 
+                        <Link
                             key={dest.id}
-                            itemClass={dest.itemClass}
-                            image={dest.image}
-                            tag={dest.tag}
-                            title={dest.title}
-                            desc={dest.desc}
-                            meta={dest.meta}
-                            onClick={() => {
-                                trackEvent('experience_opened', { experienceId: dest.id });
-                                setSelectedDestination(dest);
-                            }}
-                        />
+                            to={`/experience/${dest.id}`}
+                            style={{ textDecoration: 'none', display: 'block' }}
+                        >
+                            <ExperienceCard
+                                itemClass={dest.itemClass}
+                                image={dest.image}
+                                tag={dest.tag}
+                                title={dest.title}
+                                desc={dest.desc}
+                                meta={dest.meta}
+                            />
+                        </Link>
                     ))}
                 </div>
             </div>
-
-            <Modal 
-                isOpen={!!selectedDestination} 
-                onClose={() => setSelectedDestination(null)} 
-                destination={selectedDestination} 
-            />
         </section>
     );
 }

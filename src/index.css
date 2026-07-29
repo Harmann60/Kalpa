@@ -2251,3 +2251,113 @@ select:focus-visible {
     right: 20px;
   }
 }
+
+/* ================================================================
+   EXPERIENCE DETAIL PAGE
+   ================================================================ */
+
+.experience-detail__hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  min-height: 400px;
+  max-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+
+.experience-detail__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.experience-detail__hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 60%, rgba(0,0,0,0.1) 100%);
+}
+
+.experience-detail__hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.experience-detail__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: rgba(255,255,255,0.8);
+  font-size: 0.9rem;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.experience-detail__back:hover {
+  color: #fff;
+}
+
+.experience-detail__title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 4rem);
+  color: #fff;
+  margin: 0;
+  line-height: 1.15;
+  max-width: 700px;
+}
+
+.experience-detail__content {
+  padding: 3rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.experience-detail__body {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--border-radius);
+  padding: 2.5rem;
+}
+
+.experience-detail__description {
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .experience-detail__hero {
+    height: 50vh;
+    min-height: 300px;
+  }
+
+  .experience-detail__body {
+    padding: 1.5rem;
+  }
+
+  .experience-detail__description {
+    font-size: 1rem;
+  }
+}
+
+/* ── Gallery items as links (no default link styles) ──────────── */
+.gallery-item {
+  display: block;
+  cursor: pointer;
+}
+
+.gallery-item:hover {
+  text-decoration: none;
+}
