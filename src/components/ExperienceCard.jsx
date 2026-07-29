@@ -2,14 +2,11 @@ import { useState } from 'react';
 
 const FALLBACK_BG = 'linear-gradient(135deg, hsl(220, 10%, 14%) 0%, hsl(220, 10%, 20%) 100%)';
 
-export default function ExperienceCard({ itemClass, image, tag, title, desc, meta }) {
+export default function ExperienceCard({ image, tag, title, desc, meta }) {
     const [imgFailed, setImgFailed] = useState(false);
 
     return (
-        <div
-            className={`gallery-item ${itemClass}`}
-            style={imgFailed ? { background: FALLBACK_BG } : undefined}
-        >
+        <div className="gallery-item" style={imgFailed ? { background: FALLBACK_BG } : undefined}>
             {!imgFailed && (
                 <img
                     src={image}

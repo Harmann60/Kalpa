@@ -19,10 +19,10 @@ export default function Experiences() {
                         <Link
                             key={dest.id}
                             to={`/experience/${dest.id}`}
-                            style={{ textDecoration: 'none', display: 'block' }}
+                            className={`gallery-grid-item ${dest.itemClass}`}
+                            style={{ textDecoration: 'none' }}
                         >
                             <ExperienceCard
-                                itemClass={dest.itemClass}
                                 image={dest.image}
                                 tag={dest.tag}
                                 title={dest.title}

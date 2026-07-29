@@ -8,7 +8,17 @@
     "meta": {},
     "image": "/asset/chakka-trek.webp",
     "modalImage": "/asset/chakka-trek.webp",
-    "modalDesc": "Chaka Meadows sits at around 3,800m above Kalpa village. The 3km trail follows a stream through fields and cedar forest, opening up to sweeping views of the Kinner Kailash range and Mt Raldang (5,499m). A day hike with no prior trekking experience required — just a sound pair of lungs. Early morning starts are recommended, especially in summer."
+    "modalDesc": "Chaka Meadows sits at around 3,800m above Kalpa village. The 3km trail follows a stream through fields of Chini villagers, passing through spruce and cedar forest before opening up to sweeping views of the Kinner Kailash range and Mt Raldang (5,499m). No prior trekking experience is required — just a sound pair of lungs. The trail starts from near Hotel Rakpa Regency on the Kalpa-Roghi road. Early morning starts are recommended as the hike can get quite arduous when the sun hits. In winter, the trail transforms into a serene snow-covered wonderland — start later in the morning and dress in layers.",
+    "highlights": [
+      "2,960m to 3,800m elevation gain",
+      "3km trail along a mountain stream",
+      "Views of Kinner Kailash & Mt Raldang",
+      "Wildflowers in summer",
+      "Easy day hike, no prior experience needed",
+      "Winter: snow-covered trails",
+      "Best time: June to September (summer), December to March (winter)",
+      "Start early morning from Kalpa-Roghi road"
+    ]
   },
   {
     "id": "suicide-point",
@@ -19,7 +29,16 @@
     "meta": {},
     "image": "/asset/roghicliff.webp",
     "modalImage": "/asset/roghicliff.webp",
-    "modalDesc": "A high-impact viewpoint for travelers wanting dramatic terrain and panoramic photography in a short stop."
+    "modalDesc": "Roghi Cliff Viewpoint (formerly known as Suicide Point) is a dramatic cliffside vantage point above Kalpa, offering breathtaking panoramic views of the deep Sutlej river gorge and the surrounding Himalayan ranges. The viewpoint is a short drive or walk from Kalpa village and is one of the most popular spots for photography and sunset watching. The sheer drop and the vastness of the valley below create a sense of awe that stays with you long after you leave. Best visited in the late afternoon when golden light paints the cliffs and the valley below.",
+    "highlights": [
+      "Short drive from Kalpa village",
+      "Panoramic Sutlej valley views",
+      "Popular for photography & sunset",
+      "1-2 hour visit recommended",
+      "Sheer cliff drops",
+      "Best time: year-round",
+      "Accessible by road"
+    ]
   },
   {
     "id": "roghi-village",
@@ -30,7 +49,17 @@
     "meta": {},
     "image": "/asset/roghivillage.jpeg",
     "modalImage": "/asset/roghivillage.jpeg",
-    "modalDesc": "Roghi is a living Kinnauri village perched above the Sutlej valley, where stone-and-wood homes sit among apple orchards and ancient temples. Walk through narrow lanes where daily life unfolds much as it has for generations — women weaving Kinnauri shawls, men tending orchards, and elders gathered near the village devta temple. During the Raulane festival (held for 5-7 days at the Santang deity temple), men dress as the Sauni spirits in red gacchi masks that cover the entire face, dancing ritualistic forms to seek blessings for prosperity. In spring, the Sazo cycle marks when palanquins of the village gods are laid open and temple doors closed — the gods departing for a short rest while villagers clean and polish the temple floors. A relaxed cultural trail through heritage homes, local orchards, and the deep rhythms of Kinnauri mountain life."
+    "modalDesc": "Roghi is a living Kinnauri village perched above the Sutlej valley, where traditional stone-and-wood homes sit among apple orchards and ancient temples. Walk through narrow lanes where daily life unfolds much as it has for generations — women weaving Kinnauri shawls on handlooms, men tending apple orchards, and elders gathered near the village devta temple sharing stories. The region is famous for its high-quality apples and chilgoza (pine nuts). During the Raulane festival (held for 5-7 days at the Santang deity temple), men dress as the Sauni spirits in red gacchi masks that cover the entire face, dancing ritualistic forms to seek blessings for prosperity. In spring, the Sazo cycle marks when palanquins of the village gods are laid open and temple doors closed — the gods departing for a short rest while villagers clean and polish the temple floors. Kinnaur follows a beautiful syncretism of Hinduism and Buddhism, visible in the temples and daily rituals.",
+    "highlights": [
+      "Heritage stone-and-wood homes",
+      "Apple orchards & chilgoza forests",
+      "Kinnauri shawl weaving",
+      "Raulane festival with gacchi masks",
+      "Sazo spring ritual cycle",
+      "Hindu-Buddhist syncretism",
+      "Village devta temple",
+      "Best time: year-round"
+    ]
   },
   {
     "id": "narayan-temple",
@@ -41,6 +70,16 @@
     "meta": {},
     "image": "/asset/naryanitmeple.webp",
     "modalImage": "/asset/naryanitmeple.webp",
-    "modalDesc": "A temple known for rare Kinnauri woodcraft and pagoda architecture with strong cultural significance."
+    "modalDesc": "The Narayan-Nagini Temple is one of the finest examples of Kinnauri woodcraft. Located in the heart of Kalpa village, the temple features intricate wood carvings depicting scenes from Hindu mythology blended with local Kinnauri motifs. The pagoda-style architecture with multi-tiered wooden roofs is characteristic of the region. Dedicated to Lord Narayan and Goddess Nagini, the temple stands as a testament to the craftsmanship of Kinnauri artisans. A short walk away, the Hu-Bu-Lan-Car Gompa — a Buddhist monastery said to be founded by the great translator Rinchensang-Po (950-1055 AD) — reflects the beautiful syncretism of Hinduism and Buddhism that defines Kinnaur's spiritual landscape. Together, these sites offer a profound glimpse into the region's layered religious heritage.",
+    "highlights": [
+      "Exquisite Kinnauri woodcarvings",
+      "Pagoda-style architecture",
+      "Hindu-Buddhist syncretism",
+      "Dedicated to Narayan & Nagini",
+      "Hu-Bu-Lan-Car Gompa nearby",
+      "Founded by Rinchensang-Po (950 AD)",
+      "1-2 hour visit",
+      "Best time: year-round"
+    ]
   }
 ]

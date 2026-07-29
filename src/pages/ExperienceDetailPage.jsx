@@ -70,6 +70,7 @@ export default function ExperienceDetailPage() {
               {experience.tag}
             </span>
             <h1 className="experience-detail__title">{experience.title}</h1>
+            <p className="experience-detail__subtitle">{experience.desc}</p>
           </div>
         </div>
 
@@ -79,6 +80,17 @@ export default function ExperienceDetailPage() {
               <div className="experience-detail__body">
                 <p className="experience-detail__description">{experience.modalDesc}</p>
               </div>
+
+              {experience.highlights && (
+                <div className="experience-detail__highlights">
+                  <h3>Highlights</h3>
+                  <ul className="experience-detail__highlights-list">
+                    {experience.highlights.map((h, i) => (
+                      <li key={i}>{h}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </ScrollReveal>
 
@@ -90,15 +102,17 @@ export default function ExperienceDetailPage() {
                   <Link
                     key={e.id}
                     to={`/experience/${e.id}`}
-                    className={`gallery-item ${e.itemClass}`}
+                    className={`gallery-grid-item ${e.itemClass}`}
                     style={{ textDecoration: 'none' }}
                   >
-                    <img src={e.image} alt={e.title} className="gallery-img" />
-                    <div className="gallery-overlay">
-                      <div className="gallery-content">
-                        <span className="card-tag">{e.tag}</span>
-                        <h3 className="gallery-title">{e.title}</h3>
-                        <p className="gallery-desc">{e.desc}</p>
+                    <div className="gallery-item">
+                      <img src={e.image} alt={e.title} className="gallery-img" />
+                      <div className="gallery-overlay">
+                        <div className="gallery-content">
+                          <span className="card-tag">{e.tag}</span>
+                          <h3 className="gallery-title">{e.title}</h3>
+                          <p className="gallery-desc">{e.desc}</p>
+                        </div>
                       </div>
                     </div>
                   </Link>
