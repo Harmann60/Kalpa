@@ -4,12 +4,6 @@
 
 ### A premium digital experience for Kalpa — a Himalayan village frozen in time, alive with myth.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://kalpa-tourism.vercel.app)
-[![Built with React](https://img.shields.io/badge/Built%20with-React%2019-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev)
-[![Powered by Vite](https://img.shields.io/badge/Powered%20by-Vite%208-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev)
-[![AI Powered](https://img.shields.io/badge/AI%20Powered-OpenAI%20GPT--4o-412991?style=for-the-badge&logo=openai&logoColor=white)](https://openai.com)
-
-**[Live Site →](https://kalpa-tourism.vercel.app)**
 
 </div>
 
