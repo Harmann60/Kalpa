@@ -13,8 +13,6 @@
 
 Kalpa Tourism is a world-class, editorial-style website for **Kalpa** — a 2,960m Himalayan village in the Kinnaur district of Himachal Pradesh, India. It combines immersive visuals, GSAP-powered animations, and an AI chat assistant to help travelers plan the perfect trip.
 
-> Inspired by the design language of [stmoritz.com](https://www.stmoritz.com) — bold typography, editorial content separation, and immersive visuals.
-
 ---
 
 ## 🎯 Features
